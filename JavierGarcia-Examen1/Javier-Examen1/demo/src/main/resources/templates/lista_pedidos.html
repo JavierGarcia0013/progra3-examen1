@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <h1>Lista de Pedidos</h1>
+    <table>
+        <tr>
+            <th>Maruchan</th>
+            <th>1</th>
+            <th>300 colones</th>
+        </tr>
+        <tr th:each="pedido : ${pedidos}">
+            <td th:text="${pedido.nombrePlato}"></td>
+            <td th:text="${pedido.cantidad}"></td>
+            <td th:text="${pedido.precio}"></td>
+        </tr>
+    </table>
+</body>
+</html>
